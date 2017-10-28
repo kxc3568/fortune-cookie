@@ -4,13 +4,10 @@
 	<div class="login">
 		<h1>Some Unique Title</h1>
 
-		<form action="/fortune" method="post">
-			Username<br>
-			<input type="text" name="username" placeholder="Enter your username"><br>
+		<form method="post">
+			{% csrf_token %}
+			{{ form.as_p }}
 			<input type="submit" name="submit-btn" value="Get Fortune">
 		</form><br>
 	</div>
-	<!-- {% for t in tweets %}
-		<p>{{ t }}</p>
-	{% endfor %} -->
 {% endblock %}
