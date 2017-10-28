@@ -2,13 +2,15 @@
 
 {% block content %}
 	<div class="login">
+		<h1>Some Unique Title</h1>
+		
 		<form action="/">
 			Username<br>
 			<input type="text" name="username" placeholder="Enter your username"><br>
 			<input type="submit" name="submit-btn" value="Get Fortune">
 		</form><br>
 	</div>
-	{% for t in tweets %}
+	<!-- {% for t in tweets %}
 		<p>{{ t }}</p>
-	{% endfor %}
+	{% endfor %} -->
 {% endblock %}
