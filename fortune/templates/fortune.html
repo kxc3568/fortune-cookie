@@ -2,4 +2,7 @@
 
 {% block content %}
 	<p>Your fortune</p>
+	{% for t in tweets %}
+		<p>{{ t }}</p>
+	{% endfor %}
 {% endblock %}
