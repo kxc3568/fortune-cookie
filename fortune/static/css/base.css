@@ -1,0 +1,11 @@
+h1 {
+	text-align: center;
+}	
+
+.login {
+	text-align: center;
+}
+
+input[type="submit"] {
+	border-radius: 10px
+}

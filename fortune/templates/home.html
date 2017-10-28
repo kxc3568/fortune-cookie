@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="login">
+		<form action="/">
+			Username<br>
+			<input type="text" name="username" placeholder="Enter your username"><br>
+			<input type="submit" name="submit-btn" value="Get Fortune">
+		</form><br>
+	</div>
+	{% for t in tweets %}
+		<p>{{ t }}</p>
+	{% endfor %}
+{% endblock %}
