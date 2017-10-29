@@ -1,6 +1,10 @@
 body {
   height: 100vh;
-  background-color: #59b9ff;
+  background: -moz-linear-gradient(top,  #0084b4 0%, #c1ecff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c1ecff), color-stop(100%,#c1ecff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #0084b4 0%,#c1ecff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #0084b4 0%,#c1ecff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #0084b4 0%,#c1ecff 100%); /* IE10+ */
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -14,7 +18,7 @@ body {
 }
 #cookie {
   display: block;
-  width: 900px;
+  width: 600px;
   height: 600px;
 }
 #chalfL{
@@ -24,11 +28,11 @@ body {
 }
 #chalfR{
   display: none;
-  width: 500px;
+  width: 350px;
   height: 600px;
 }
 #paper{  
-  display: block;
+  display: none;
   margin: auto;
   background-color: #ffeeee;
   width: 100px;

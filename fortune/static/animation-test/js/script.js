@@ -32,7 +32,7 @@ $(document).ready(function(){
 			switch(breakSteps[ind]){
 				case 'break1':
 					crunch1.play();
-					$('#cookie').attr('src', "assets/cookie2.png")
+					$('#cookie').attr('src', "assets/cookiecrack1.png")
 					$('#cookie').addClass('break1')
 					$('#cookie').one(animationEvent, function(event){
 						console.log('done')
@@ -40,6 +40,7 @@ $(document).ready(function(){
 					break;
 				case 'break2':
 					crunch2.play();
+					$('#cookie').attr('src', "assets/cookiecrack2.png")
 					$('#cookie').removeClass('break1')
 					$('#cookie').addClass('break2')
 					$('#cookie').one(animationEvent, function(event){

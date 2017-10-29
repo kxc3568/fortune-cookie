@@ -1,18 +1,50 @@
-html {
-	
+body {
+	font-family: "Raleway";
+	height: 100vh;
+	background: -moz-linear-gradient(top,  #0084b4 0%, #c1ecff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c1ecff), color-stop(100%,#c1ecff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0084b4 0%,#c1ecff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #0084b4 0%,#c1ecff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #0084b4 0%,#c1ecff 100%); /* IE10+ */
 }
 
-.login {
+h1 {
+	font-size: 108px;
 	text-align: center;
-	height: 100%;
+	padding-top: 5%;
+}
+
+.container-fluid {
 	width: 100%;
-	display: flex;
-	position: fixed;
-	align-items: center;
-	justify-content: center;
-	font-family: "Roboto"
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.form-control {
+	font-weight: bold;
+	width: 25%;
+	position: absolute;
+	top: 350px;
+	left: 580px;
 }
 
 input[type="submit"] {
-	border-radius: 10px
+	background: #0084b4;
+	border-color: #0084b4;
+	border-radius: 20px
+	border: 0 none;
+}
+
+.fl {
+	display: flex;
+}
+
+.cl {
+	flex-direction: column;
+}
+
+.center-both {
+	align-items: center;
+	justify-content: center;
 }
