@@ -48,5 +48,6 @@ for f in fortunevals:
   bestfortunes[f]=sum
 
 finalfortune = (max(bestfortunes.keys(), key=(lambda k: bestfortunes[k])))
+return finalfortune
 
 #print(finalfortune)
