@@ -2,9 +2,9 @@
 
 {% block content %}
 
-	<div class="container fl cl center-both">
-		<h1>Some Unique Title</h1>
-		<form method="post" class="fl cl center-both" action="/fortune/">
+	<div class="container-fluid fl cl center-both">
+		<h1 class="col-sm-8">Deep Fortunes</h1><br>
+		<form method="post" class="form-control fl cl center-both" action="/fortune/">
 			{% csrf_token %}
 			{{ form.as_p }}
 			<input type="submit" name="submit-btn" value="Get Fortune">
