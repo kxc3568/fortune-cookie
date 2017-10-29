@@ -25,7 +25,7 @@ $(document).ready(function(){
 	}
 
 	var animationEvent = whichAnimationEvent();
-	var breakSteps = ['break1', 'break2', 'break3', 'unfurl']
+	var breakSteps = ['break1', 'break2', 'break3']
 	var ind = 0
 	$('body').click(function(){
 		if(ind < breakSteps.length){
@@ -34,18 +34,12 @@ $(document).ready(function(){
 					crunch1.play();
 					$('#cookie').attr('src', "assets/cookiecrack1.png")
 					$('#cookie').addClass('break1')
-					$('#cookie').one(animationEvent, function(event){
-						console.log('done')
-					});
 					break;
 				case 'break2':
 					crunch2.play();
 					$('#cookie').attr('src', "assets/cookiecrack2.png")
 					$('#cookie').removeClass('break1')
 					$('#cookie').addClass('break2')
-					$('#cookie').one(animationEvent, function(event){
-						console.log('done')
-					});
 					break;
 				case 'break3':
 					crunch3.play();
@@ -55,18 +49,13 @@ $(document).ready(function(){
 					$('#chalfR').attr('style', 'display: block')
 					$('#chalfR').addClass('break3R')
 					$('#chalfL').one(animationEvent, function(event){
-						$('#chalfL').attr('display', 'none')
+						$('#chalfL').attr('style', 'display: none')
+						$('#paper').attr('style', 'display: flex')
+						$('#paper').addClass('fadein')
 					});
 					$('#chalfR').one(animationEvent, function(event){
-						$('#chalfR').attr('display', 'none')
-					});
-					break;
-				case 'unfurl':
-					$('#paper').addClass('unfurl')
-					$('#paper').one(animationEvent, function(event){
-						console.log('done')
-						$('#paper').removeClass('unfurl')
-					});
+						$('#chalfR').attr('style', 'display: none')
+					});					
 					break;
 			}
 			ind++;

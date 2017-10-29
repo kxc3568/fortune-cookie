@@ -29,14 +29,18 @@ body {
 #chalfR{
   display: none;
   width: 350px;
-  height: 600px;
-}
+  height: 600px;  
+} 
 #paper{  
   display: none;
+  font-size : 18pt;
+  align-items: center;
+  justify-content: center;
   margin: auto;
+  border: 10px solid black;
   background-color: #ffeeee;
-  width: 100px;
-  height: 100px;
+  width: 800px;
+  height: 200px;
 }
 
 .cont{
@@ -59,7 +63,8 @@ body {
     position:relative;
     animation: breakthreeR 1s cubic-bezier(0.645, 0.045, 0.355, 1.000) forwards;
 }
-.unfurl {
+.fadein {
+    animation: fadein 500ms linear forwards;
 }
 
 @keyframes crack {
@@ -98,5 +103,13 @@ body {
     transform: rotate(30deg);
     left: 200px;
     opacity: 0;
+  }
+}
+@keyframes fadein {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }
