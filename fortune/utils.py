@@ -12,18 +12,6 @@ api = twitter.Api(consumer_key=CONSUMER_KEY, consumer_secret=CONSUMER_SECRET,
 def getTimeline(name):
 	statuses = api.GetUserTimeline(screen_name=name)
 
-	# text = ''
-	# if len(statuses)<10:
-	# 	r = len(statuses)
-	# else:
-	# 	r = 10
-	# for i in range(0,r):
-	# 	if statuses[i].retweeted_status is not None:
-	# 		text += str(statuses[i].retweeted_status.full_text) + " "
-	# 	else:
-	# 		text += str(statuses[i].full_text) + " "
-	# return text.rstrip()
-
 	text = ''
 	stop = 0
 
@@ -81,12 +69,6 @@ def getFortune(name):
 			vals = [float(v) for v in vals]
 			sum+=abs(tweets[tweet][i]-vals[i])
 		bestfortunes[q.message] = sum
-
-	# for f in fortunevals:
-	# 	sum = 0
-	# 	for i in range(5):
-	# 		sum += abs(tweets[tweet][i]-fortunevals[f][i]) #error
-	# 	bestfortunes[f] = sum
 
 	finalfortune = (max(bestfortunes.keys(), key=(lambda k: bestfortunes[k])))
 	return finalfortune
