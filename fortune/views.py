@@ -5,18 +5,19 @@ from .forms import UserForm
 
 # Create your views here.
 def HomeView(request):
+	form = UserForm()
+	return render(request, 'home.html', {'form': form})
+
+def FortuneView(request):
 	if request.method == 'POST':
 		form = UserForm(request.POST)
 		if form.is_valid():
 			username = form.cleaned_data['username']
-			#return HttpResponseRedirect('/fortune/')
 			return render(request, 'fortune.html', {'tweets': getTimeline(username)})
 		else:
 			#errors
 			pass
-	else:
-		form = UserForm()
-	return render(request, 'home.html', {'form': form})
-
-# def FortuneView(request):
-# 	return render(request, 'fortune.html', {'tweets': username})
+	else: 
+		#???
+		pass
+	return render(request, 'fortune.html', {'tweets': username})	
