@@ -8,14 +8,15 @@ def HomeView(request):
 	if request.method == 'POST':
 		form = UserForm(request.POST)
 		if form.is_valid():
-			return HttpResponseRedirect('/fortune/')
+			username = form.cleaned_data['username']
+			#return HttpResponseRedirect('/fortune/')
+			return render(request, 'fortune.html', {'tweets': getTimeline(username)})
+		else:
+			#errors
+			pass
 	else:
 		form = UserForm()
-	return render(request, 'home.html', {'form': form, 'tweets': getTimeline('dhruvak_')})
+	return render(request, 'home.html', {'form': form})
 
-def FortuneView(request):
-	if request.method == 'POST':
-		username = getTimeline(request.POST)
-	else: 
-		return HttpResponseNotFound('<p>ERROR</p>')
-	return render(request, 'fortune.html', {'tweets': username})
+# def FortuneView(request):
+# 	return render(request, 'fortune.html', {'tweets': username})
