@@ -1,10 +1,10 @@
 $(document).ready(function(){	
     var crunch1 = document.createElement('audio');
-    crunch1.setAttribute('src', 'assets/crunch1.mp3');
+    crunch1.setAttribute('src', 'static/animation-test/assets/crunch1.mp3');
     var crunch2 = document.createElement('audio');
-    crunch2.setAttribute('src', 'assets/crunch2.mp3');
+    crunch2.setAttribute('src', 'static/animation-test/assets/crunch2.mp3');
     var crunch3 = document.createElement('audio');
-    crunch3.setAttribute('src', 'assets/crunch3.mp3');
+    crunch3.setAttribute('src', 'static/animation-test/assets/crunch3.mp3');
     
 	function whichAnimationEvent(){
 	  var t,
@@ -32,12 +32,12 @@ $(document).ready(function(){
 			switch(breakSteps[ind]){
 				case 'break1':
 					crunch1.play();
-					$('#cookie').attr('src', "assets/cookiecrack1.png")
+					$('#cookie').attr('src', crack2)
 					$('#cookie').addClass('break1')
 					break;
 				case 'break2':
 					crunch2.play();
-					$('#cookie').attr('src', "assets/cookiecrack2.png")
+					$('#cookie').attr('src', crack2)
 					$('#cookie').removeClass('break1')
 					$('#cookie').addClass('break2')
 					break;
