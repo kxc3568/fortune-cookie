@@ -1,18 +1,31 @@
-html {
-	
+body {
+	height: 100vh;
+	background: -moz-linear-gradient(top,  #0084b4 0%, #c1ecff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c1ecff), color-stop(100%,#c1ecff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0084b4 0%,#c1ecff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #0084b4 0%,#c1ecff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #0084b4 0%,#c1ecff 100%); /* IE10+ */
 }
 
-.login {
-	text-align: center;
+.container {
+	width: 50%;
 	height: 100%;
-	width: 100%;
-	display: flex;
-	position: fixed;
-	align-items: center;
-	justify-content: center;
-	font-family: "Roboto"
+	margin: 0 auto;
 }
 
 input[type="submit"] {
 	border-radius: 10px
+}
+
+.fl {
+	display: flex;
+}
+
+.cl {
+	flex-direction: column;
+}
+
+.center-both {
+	align-items: center;
+	justify-content: center;
 }
