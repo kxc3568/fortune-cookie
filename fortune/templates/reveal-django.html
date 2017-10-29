@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
 	<head>
 		<title>Loading</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="reveal.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'animation-test/reveal.css' %}">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	</head>
 	<body>
 		<div class='cookiediv'>
-			<img src="assets/cookie.png" id='cookie'>
+			<img src="{% static 'animation-test/assets/cookie.png' %}" id='cookie'>
 			<div class='cont'>
-				<img src="assets/cookiehalfL.png" id='chalfL'></div>
+				<img src="{% static 'animation-test/assets/cookiehalfL.png' %}" id='chalfL'></div>
 			<div class='cont'>
-				<img src="assets/cookiehalfR.png" id='chalfR'></div>
+				<img src="{% static 'animation-test/assets/cookiehalfR.png' %}" id='chalfR'></div>
 		<div id='paper'>{{ fortune }}</div>
 		</div>
 		<p></p>
@@ -22,6 +23,6 @@
 		  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
 		  crossorigin="anonymous"></script>
-		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="{% static 'animation-test/js/script.js' %}"></script>
 	</footer>
 </html>
