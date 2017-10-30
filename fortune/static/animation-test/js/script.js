@@ -1,10 +1,10 @@
 $(document).ready(function(){	
     var crunch1 = document.createElement('audio');
-    crunch1.setAttribute('src', 'static/animation-test/assets/crunch1.mp3');
+    crunch1.setAttribute('src', scrunch1);
     var crunch2 = document.createElement('audio');
-    crunch2.setAttribute('src', 'static/animation-test/assets/crunch2.mp3');
+    crunch2.setAttribute('src', scrunch2);
     var crunch3 = document.createElement('audio');
-    crunch3.setAttribute('src', 'static/animation-test/assets/crunch3.mp3');
+    crunch3.setAttribute('src', scrunch3);
     
 	function whichAnimationEvent(){
 	  var t,
