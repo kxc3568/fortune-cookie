@@ -32,7 +32,7 @@ $(document).ready(function(){
 			switch(breakSteps[ind]){
 				case 'break1':
 					crunch1.play();
-					$('#cookie').attr('src', crack2)
+					$('#cookie').attr('src', crack1)
 					$('#cookie').addClass('break1')
 					break;
 				case 'break2':
