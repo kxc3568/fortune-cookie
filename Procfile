@@ -1,0 +1,1 @@
+web: gunicorn fortune_cookie.wsgi --log-file -
