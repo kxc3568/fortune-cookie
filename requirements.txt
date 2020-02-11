@@ -12,7 +12,7 @@ click==6.7
 cryptography==2.1.2
 cycler==0.10.0
 dj-database-url==0.4.2
-Django==1.11.5
+Django==1.11.28
 djangorestframework==3.7.0
 docker==2.5.1
 docker-pycreds==0.2.1
