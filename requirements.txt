@@ -38,7 +38,7 @@ matplotlib==2.1.0
 more-itertools==3.2.0
 numpy==1.13.3
 oauthlib==2.0.6
-opencv-python==3.3.0.10
+opencv-python==3.3.1.11
 pandas==0.20.3
 passlib==1.7.1
 protobuf==3.1.0
